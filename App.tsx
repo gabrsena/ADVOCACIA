@@ -1,0 +1,1 @@
+// O código foi centralizado em index.tsx conforme solicitado.

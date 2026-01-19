@@ -160,7 +160,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-navy-900 shadow-lg py-2' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${scrolled ? 'bg-navy-900/95 backdrop-blur-md shadow-xl py-3' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -231,25 +231,25 @@ const Hero: React.FC = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 md:px-6 relative z-10 text-center md:text-left mt-16">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto md:mx-0">
           <div className="inline-flex items-center space-x-2 bg-navy-900/50 backdrop-blur-md px-3 py-1 rounded-full border border-gold/30 mb-6 animate-fade-in-up">
             <span className="w-2 h-2 rounded-full bg-gold"></span>
             <span className="text-gold text-xs font-semibold uppercase tracking-wider">Advocacia em Sorocaba/SP</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight">
-            Advocacia Estratégica & <br/>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight">
+            Advocacia Estratégica & <br className="hidden md:inline"/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-200">
               Compromisso com a Justiça
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-300 mb-10 font-light max-w-2xl leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-10 font-light max-w-xl md:max-w-2xl leading-relaxed mx-auto md:mx-0">
             Defendendo seus interesses com integridade, técnica jurídica refinada e atendimento personalizado. 
             Especialistas em resolver conflitos complexos.
           </p>
           
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
             <Button>
               Fale com um Especialista
             </Button>
@@ -387,7 +387,6 @@ const About: React.FC = () => {
 
               <div className="pt-8">
                 <div className="flex items-center space-x-4">
-                  <img src="https://picsum.photos/id/64/100/100" alt="Assinatura" className="h-12 opacity-60" />
                   <div>
                     <p className="font-bold text-navy-900">Dr. Carlos Silva</p>
                     <p className="text-xs text-gold uppercase font-bold">Sócio Fundador | OAB/SP 000.000</p>
